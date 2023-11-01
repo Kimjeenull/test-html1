@@ -1,0 +1,17 @@
+html,body{
+    margin:0;
+    font-family: ;
+    font-size:16px; /* 권장 크기 */
+}
+figure,p,h1,h2,h3{ margin: 0; } /* 바깥 여백 없애기 */
+img{vertical-align: middle;} /* 줄 간격 등으로 여백이 살짝 있기에 정리해야함 */
+ul,li{
+    margin:0; padding:0;
+    list-style: none;
+}
+table{ border-collapse: collapse; }
+*{
+    box-sizing: border-box;
+}
+
+a{color: black; text-decoration: none;}

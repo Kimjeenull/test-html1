@@ -1,0 +1,75 @@
+@import url(./reset.css);
+/* index.css */
+
+:root{
+    --page--width: 1536px; /* 코드를 한번에 통일시킴 */
+}
+
+header{
+    width: var(--page--width); margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+header > h1{}
+header > h1 > a{}
+
+header > nav{}
+header > nav > a{
+    padding: 0 20px;
+}
+
+header > div{}
+header > div > a{}
+
+
+/* main */
+main{ width: var(--page--width);}
+
+.spot {
+    position: relative;
+}
+.spot > img{ width: 100%;}
+.spot > figcaption{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%; /* 부모의 크기로 확장됨 */
+
+    display: flex; /* 가로 정렬이 기본 */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 고로 세로 정렬로 바꿈 */
+    color: #5E452D; /* 밑에 있는 자식들에게 상속 */
+}
+.spot > figcaption > b{
+    text-align: center;
+    font-size: 3.5rem;
+    /* rem : 최상위 태그. html태그가 가지고 있는 폰트 사이즈에 곱셈함 */
+    /* em : 바로 위에 태그(부모)를 곱셈함. 여기서라면 b태그 바로 위, figcaption에 곱셈 */
+    line-height: 1;
+    animation: txt 1s forwards;
+}
+
+.spot > figcaption > p{
+    margin-top: 20px;
+    animation: txt 1s 0.5s forwards;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+@keyframes txt{
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* footer */
+footer{ width: var(--page--width);}
